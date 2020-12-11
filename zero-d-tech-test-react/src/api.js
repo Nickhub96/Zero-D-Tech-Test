@@ -9,6 +9,10 @@ export const getUsers = () => {
     });
 };
 
-// export const getPostsByUser = () => {
-//   return axios.get()
-// }
+// export const getPostsByUser = userId => {
+//   return axios
+//     .get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+//     .then(({ data }) => {
+//       return data;
+//     });
+// };

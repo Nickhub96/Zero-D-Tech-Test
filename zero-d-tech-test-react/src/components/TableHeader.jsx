@@ -5,7 +5,6 @@ const TableHeader = props => {
   let header = Object.keys(users[0]);
   return header
     .map((key, index) => {
-      console.log(key);
       return <th key={index}>{key.toUpperCase()}</th>;
     })
     .splice(0, 3);

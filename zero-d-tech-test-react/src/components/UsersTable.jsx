@@ -1,5 +1,4 @@
 import React from "react";
-import TableHeader from "./TableHeader";
 
 const UsersTable = props => {
   const { user } = props;
