@@ -8,6 +8,14 @@ export const getUsers = () => {
     });
 };
 
+export const getUserById = userId => {
+  return axios
+    .get(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    .then(({ data }) => {
+      return data;
+    });
+};
+
 export const getPostsByUser = userId => {
   return axios
     .get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
@@ -30,7 +38,6 @@ export const PostNewUser = (name, username, email) => {
 };
 
 export const DeleteUser = id => {
-  //not sure why this isnt deletng the user
   return axios
     .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(data => {

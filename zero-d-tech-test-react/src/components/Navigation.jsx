@@ -3,7 +3,8 @@ import { Link } from "@reach/router";
 
 const Navigation = () => {
   return (
-    <nav>
+    //Navigation bar with a link to the Home page
+    <nav className="nav">
       <Link to="/" className="nav-link">
         Home
       </Link>
