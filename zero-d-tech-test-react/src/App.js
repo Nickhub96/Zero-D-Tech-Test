@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import { Router } from "@reach/router";
 import NoMatch from "./components/NoMatch";
 import Navigation from "./components/Navigation";
+import Posts from "./components/Posts";
+import ErrorPage from "./components/ErrorPage";
 
 class App extends React.Component {
   render() {
@@ -14,7 +16,8 @@ class App extends React.Component {
         <Navigation />
         <Router>
           <Home path="/" />
-          <NoMatch default />
+          <Posts path="/posts/:id" />
+          <ErrorPage default />
         </Router>
       </div>
     );
