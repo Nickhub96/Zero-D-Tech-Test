@@ -27,6 +27,7 @@ class UsersTable extends React.Component {
             //call Delete user in the delete button so as to delete the user when it is pressed
           }
           <button
+            className="deleteButton"
             onClick={() => {
               if (user) {
                 api.DeleteUser(id);

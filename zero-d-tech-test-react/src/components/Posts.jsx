@@ -16,15 +16,20 @@ export default class User extends Component {
     const { posts, title, body, isLoading, user } = this.state;
     if (isLoading) return <IsLoading />;
     //destructing variables and using IsLoading component while data renders
+    console.log(user);
     return (
       <div>
-        <p>{user.name}</p>
-        <p>{user.username}</p>
-        <p>{user.email}</p>
-        <p>{user.website}</p>
-        <p>{user.phone}</p>
-        <form onSubmit={this.handleSubmit}>
-          Make a Post
+        <section className="userCard">
+          <p> Name: {user.name}</p>
+          <p>Username: {user.username}</p>
+          <p>Email: {user.email}</p>
+          <p>Website: {user.website}</p>
+          <p>Phone Number:{user.phone}</p>
+        </section>
+
+        <form className="postPost" onSubmit={this.handleSubmit}>
+          <h2> Make a Post</h2>
+
           <label>
             Title
             <input

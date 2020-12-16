@@ -41,10 +41,10 @@ class Home extends React.Component {
         {
           //using a form to allow the user to create a new user and make a request to the database to do so
         }
-        <form onSubmit={this.handleSubmit}>
-          Add new user{" "}
+        <form className="addUser" onSubmit={this.handleSubmit}>
+          <h2>New User</h2>
           <label>
-            name
+            Name
             <input
               required
               type="text"
@@ -54,7 +54,7 @@ class Home extends React.Component {
             />
           </label>
           <label>
-            username
+            Username
             <input
               required
               type="text"
@@ -64,7 +64,7 @@ class Home extends React.Component {
             />
           </label>
           <label>
-            email
+            Email
             <input
               required
               type="text"
@@ -73,7 +73,9 @@ class Home extends React.Component {
               onChange={this.handleInput}
             />
           </label>
-          <button type="submit">Add </button>
+          <button className="addButton" type="submit">
+            Add{" "}
+          </button>
         </form>
       </div>
     );

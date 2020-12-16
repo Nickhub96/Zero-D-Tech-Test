@@ -5,11 +5,11 @@ export default class PostCards extends Component {
     const { post } = this.props;
     //destructing the post data that has been passed down on props
     return (
-      <li>
+      <li className="postCard">
         {
           //using the post data that has been passed down to create identical cards for every post
         }
-        <h2>{post.title}</h2>
+        <h3>{post.title.toUpperCase()}</h3>
         <p>{post.body}</p>
       </li>
     );
